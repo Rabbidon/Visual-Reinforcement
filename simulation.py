@@ -15,7 +15,7 @@ class Engine:
 
         sun = Sun(self.canvas, 1,100,960,540,fill="yellow")
         self.objects.append(sun)
-        self.objects.append(Planet(self.canvas, 0.1, sun, 1, 20,500,200,fill="green"))
+        self.objects.append(Planet(self.canvas, 0.01, sun, 1, 20,500,200,fill="green"))
         
         self.update() 
       
@@ -24,7 +24,7 @@ class Engine:
         for object in self.objects:
             object.update()
   
-        self.canvas.after(100, self.update) 
+        self.canvas.after(1000//60, self.update) 
   
 if __name__ == "__main__": 
   
