@@ -1,12 +1,12 @@
 class Sun:
 
-    def __init__(self, canvas, mass, radius, x, y, **kwargs):
+    def __init__(self, engine, mass=10, radius=20, x=960, y=540):
 
        self.x = x
        self.y = y
        self.radius = radius
-       self.canvas = canvas
-       self.shape = canvas.create_oval(x-radius,y-radius,x+radius,y+radius, **kwargs)
+       self.engine = engine
+       self.mass = mass
 
     def update(self):
         
